@@ -3,7 +3,7 @@
 {{- end -}}
 
 {{- define "hreflang_x_default" -}}
-  {{- if eq .Lang ( index .Site.Languages 0 ).Lang -}}
+  {{- if eq .Lang hugo.Sites.Default.Language.Lang -}}
     <link rel='alternate' hreflang='x-default' href='{{ .Permalink }}'>
   {{- end -}}
 {{- end -}}
